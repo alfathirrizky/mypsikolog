@@ -20,7 +20,6 @@ class PostResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationLabel = 'Events';
-    protected static ?string $modelLabel = 'Event';
 
     public static function form(Form $form): Form
     {
