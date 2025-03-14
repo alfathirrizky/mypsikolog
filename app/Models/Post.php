@@ -1,9 +1,31 @@
 <?php
 
 namespace App\Models;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use illuminate\Support\Str;
 use Illuminate\Support\Arr;
 class Post extends Model{
+
+    use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'body',
+    ];
+
+    // public function setContentAttribute($value)
+    // {
+    //     $this->attributes['body'] = str_replace(['<p>', '</p>'], '', $value);// Remove HTML tags
+    // }
+    // public static function boot(){
+    //     parent::boot();
+
+    //     static::saving(function ($post) {
+    //         $post->body = strip_tags($post->body, '<p><br><strong><em>');
+    //     });
+        
+    // }
     // public static function all(){
     //     return [
     //         [
